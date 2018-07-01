@@ -1,0 +1,24 @@
+.row.pl-0.justify-content-between
+    .col-md-6.pl-0
+        div.container-fluid.pl-0.pr-4 !{page.content}
+    .col-md-5.pl-0
+        .container-fluid.pl-md-2
+            .row
+                h3.pl-md-4.col-12.fw-300 Something related to me:
+                each c,way in page.contact
+                        if way == 'github' || way == 'behance'
+                            .col-12.col-sm-6
+                                .card.mt-4
+                                    each val,key in c
+                                        a(href=val[1]).d-flex.justify-content-center: img.card-img-top.fa-icon-100(src='img/'+val[0])
+                                        .card-body
+                                            p.card-text.text-center #{key}
+                        else
+                            .col-sm-12
+                                each val,key in c
+                                    .container-fluid
+                                        .row.p-0
+                                            .col-1.d-flex.justify-content-end.p-0
+                                                img.fa-icon-25(src='img/'+val)
+                                            .col-11.d-flex.align-items-center
+                                                p.mt-3 #{key}

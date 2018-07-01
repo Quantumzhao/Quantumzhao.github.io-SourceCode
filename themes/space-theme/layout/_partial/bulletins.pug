@@ -1,0 +1,25 @@
+h2.col-12.highlight-l.fw-300 Bulletin Board
+.row
+    each pst in site.pages.data
+        if pst.layout == "bulletin"
+            .col-md-6
+                a.btn-bulletin
+                    .card.bulletin-sm.ml-2.mr-2.pt-md-4.ml--4
+                        .card-body
+                            .d-flex.justify-content-between.align-items-center
+                                h3.fw-400.card-title(style={display:'inline-block'}) #{pst.title}
+                                img.fa-icon-30(src="img/"+ pst.icon)
+                            .pb-1.card-text !{truncate(pst.content, {length: 200, separator: " "})}
+
+script.
+    var $content = $('#content'),
+        $bulletin = $('.btn-bulletin');
+
+    $bulletin.each(function(i, el) {
+        $(this).click(function(e) {
+            //console.log(location.origin);
+
+            $content.html("");
+            $content.load(`${location.origin}/bulletins/bulletin/${i}.html`);
+        })
+    })

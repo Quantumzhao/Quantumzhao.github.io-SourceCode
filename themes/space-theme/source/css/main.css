@@ -1,0 +1,276 @@
+@font-face {
+    font-family: ConSim-Light;
+    src: url('fonts/FontDesign-ConservativeSimplicity-Neo-Levis-Completus.ttf');
+}
+
+@font-face {
+    font-family: ConSim-Bold;
+    src: url('fonts/FontDesign-ConservativeSimplicity-Neo-Beald-Completus.ttf');
+}
+
+* {
+    color: rgb(63, 169, 245) !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-sizing: border-box;
+}
+
+a:hover {
+    text-decoration: none !important;
+}
+
+body {
+    background-color: #1c1c1c !important;
+}
+
+h2 {
+    font-size: 2.8rem;
+}
+
+h3 {
+    font-size: 1.7rem;
+}
+
+img {
+    height: 100%;
+    color: #00C3FF;
+}
+
+p{
+    font-size: 1.1rem;
+    font-weight: 200;
+    line-height: 1.8rem;
+    text-align: justify;
+}
+
+.bulletin-sm {
+    padding-bottom: 5vh;
+    border-bottom: #00C3FF solid 1vh !important;
+    border-radius: 0 !important;
+}
+
+.bulletin-sm:hover {
+    background: linear-gradient(to top, rgba(0, 195, 255, 0.25), rgba(0,0,0,0) 50%) !important;
+    cursor: pointer;
+}
+
+.container-fluid {
+    margin-left: 0.026vw;
+}
+
+.card {
+    border: 0;
+}
+
+.card-body {
+    padding: 1rem 0 1.25rem 0;
+}
+
+.card-img-top:hover {
+    opacity: 0.7;
+}
+
+.f-0 {
+    flex-grow: 0;
+}
+
+.f-auto {
+    flex-direction: column;
+    flex-grow: inherit;
+}
+
+.fa-icon-25 {
+    width: 25px;
+}
+
+.fa-icon-30 {
+    max-width: 30px;
+}
+
+.fa-icon-35 {
+    padding-bottom: 1.25rem;
+    max-width: 35px;
+}
+
+.fa-icon-40 {
+    max-width: 40px;
+}
+
+.fa-icon-100 {
+    margin: auto;
+    max-width: 100px;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.fs-2 {
+    font-size: 2rem;
+}
+
+.fs-bp > p {
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+}
+
+.fw-200 {
+    font-weight: 200;
+}
+
+.fw-300 {
+    font-weight: 300;
+}
+
+.fw-400 {
+    font-weight: 400;
+}
+
+.fw-500 {
+    font-weight: 500;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+.fw-700 {
+    font-weight: 700;
+}
+
+.fw-800 {
+    font-weight: 800;
+}
+.h-120 {
+    height: 120% !important;
+}
+
+.highlight-l {
+    border-left: solid .6rem  #00C3FF !important;
+}
+
+.highlight-both {
+    border-left: solid .6rem  #00C3FF !important;
+    border-right: solid .6rem  #00C3FF !important;
+}
+
+.list-group-item:hover {
+    background: linear-gradient(to left, rgba(0, 195, 255, 0.25), rgba(0,0,0,0)) !important;
+}
+
+.ml--1 {
+    margin-left: -1.25rem;
+}
+
+.nav {
+    margin: -1vh 0 3vh 0;
+    flex-basis: auto;
+}
+
+.nav-item > .active > span{
+    padding: 0 .5rem;
+    color: #1c1c1c !important;
+    background: rgb(63, 169, 245) !important;
+}
+
+.nav-link {
+    overflow: hidden;
+    margin: 1.25rem 0;
+    padding: 0 0.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 1000;
+    line-height: 2rem;
+}
+
+.pl-md-2 {
+    padding-left: 1.25rem;
+}
+
+.pl-md-4 {
+    padding-left: 2.5rem;
+}
+
+.pos-relative {
+    position: relative;
+}
+
+.pos-absolute {
+    position: absolute;
+}
+
+.row {
+    margin: auto;
+}
+
+.site-title{
+    font-family: "ConSim-Bold";
+    font-size: 5vw;
+}
+
+.text-lg {
+    font-size: 7vw;
+}
+
+.var-md-fs {
+    font-size: 1.7rem;
+}
+
+.w-md-60 {
+    width: 60%;
+}
+
+.w-md-75 {
+    width: 75%;
+}
+
+#content{
+    width: 100%;
+}
+
+@media (max-width: 576px) {
+    h2 {
+        font-size: 2rem;
+    }
+    .fa-icon-35 {
+        max-width: 20px;
+    }
+    .var-md-fs-5 {
+        font-size: 5vw;
+    }
+}
+
+@media (max-width: 1024px) {
+    .fs-bp > p,
+    p {
+        font-size: 1rem;
+    }
+    .w-md-60, 
+    .w-md-75 {
+        width: 100%;
+    }
+    .var-md-fs {
+        font-size: 4vw;
+    }
+    .site-title {
+        font-size: 11vw;
+    }
+    .text-lg {
+        font-size: 15vw;
+    }
+    .pl-md-2,
+    .pl-md-4{
+        padding-left: 0rem;
+    }
+    .ml--4 {
+        margin-left: -1.25rem !important;
+    }
+}
+
+@media (min-width: 2048px) {
+    .w-xl-40 {
+        width: 40%;
+    }
+}

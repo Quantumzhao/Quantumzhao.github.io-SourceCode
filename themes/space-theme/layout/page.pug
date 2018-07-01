@@ -1,0 +1,10 @@
+if page.title == 'Bulletin Board'
+    include _partial/bulletins.pug
+else if page.title == "about"
+    include _partial/about.pug
+else if page.title == "Github Projects"
+    include _partial/projects.pug
+else if page.title == "posts"
+    include _partial/posts.pug
+else if page.layout == "bulletin"
+    include _partial/bulletin.pug

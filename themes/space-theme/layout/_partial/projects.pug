@@ -1,0 +1,12 @@
+.col-12.pl-0
+    ul.list-group.w-md-75
+        each proj,name in page.projects
+            a(href=proj.href)
+                li.list-group-item.p-2.pb-0
+                    .d-flex.justify-content-between
+                        .w-75
+                            h3.var-md-fs-5.fw-400.mb-2 #{name}
+                        .w-25.d-flex.justify-content-end
+                            each icon in proj.icon
+                                img.fa-icon-30.ml-4(src='img/'+ icon)
+                    p #{proj.desc}
