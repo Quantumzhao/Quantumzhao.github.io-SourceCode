@@ -170,6 +170,7 @@ p{
     flex-basis: auto;
 }
 
+.nav-item span:hover,
 .nav-item > .active > span{
     padding: 0 .5rem;
     color: #1c1c1c !important;
