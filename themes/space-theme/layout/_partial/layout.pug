@@ -10,9 +10,9 @@ html.h-100(lang=config.language)
         link(rel="stylesheet", href=url_for('css/main.css'))
         script(src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js")
         script(src="https://cdn.bootcss.com/bootstrap/4.1.1/js/bootstrap.min.js")
-        title #{config.title}
+        script(src=url_for("js/main.js"))
+        title #{page.title}
     body.h-100
-        - // the div below is navigation bar
         .col-md-10.col-12.offset-md-1.flex.h-100
             div.container-fluid.f-0
                 h1.site-title.mt-2
@@ -22,56 +22,7 @@ html.h-100(lang=config.language)
                 ul.nav.d-flex.justify-content-between.w-md-60.w-xl-40
                     each dir,index in theme.menu
                         li.nav-item
-                            - // when each button is clicked, load the content into the content box
                             a.nav-link(href=dir): span.var-md-fs=index
 
-            - // the section below is the webpage content
-            section.container-fluid.mb-4.f-auto.pos-relative#content
-
-        script.
-            $(document).ready(function(){
-                var $content = $("#content"),
-                    $navlink = $(".nav-link"),
-                    $activeLink = undefined,
-                    $nav = $('.nav');
-                
-
-                $navlink.eq(0).addClass('active');
-                $activeLink = $('.active');
-                //console.log($nav.css("left"));
-
-                function toggleNavClass(name, activeElement) {
-                    $navlink.removeClass(name);
-                    activeElement.addClass(name);
-                }
-
-                $navlink.each(function(i, o) {
-                    //console.log(this);
-                    var $this = $(this),
-                        path = $this.attr('href'),
-                        toggleClassName = 'active';
-
-                    console.log(location.origin);
-
-                    $this.hover(function(e) {
-                        toggleNavClass(toggleClassName, $this);
-
-                    });
-
-                    $this.mouseleave(function(e) {
-                        toggleNavClass(toggleClassName, $activeLink);
-
-                    })
-
-                    $this.click(function(e) {
-                        e.preventDefault();
-
-                        toggleNavClass(toggleClassName, $this);
-                        $activeLink = $this;
-
-                        $content.html("");
-                        $content.load(location.origin + path);
-                    })
-                });
-            });
-            
+            .container-fluid.mb-4.f-auto.pos-relative
+                block content
