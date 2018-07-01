@@ -78,6 +78,6 @@ theme: space-theme
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/ckouder/Quantumzhao.github.io.git
+  repo: git@github.com:ckouder/Quantumzhao.github.io.git
   branch: v01-1
   message: finally, we have this website * 0.99
